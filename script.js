@@ -22,7 +22,16 @@ arrow.addEventListener("click", () => {
     currentScroll = window.scrollY;
 })
 
-window.addEventListener("load", () => {
+// Window on load load events:
+let loader = document.getElementById("loader-page");
+function onPageLoad(){
     console.log(`%cJOHANNES ART`, `font-family: "BonvenoCF"; font-size: 30px`);
     console.log(`%cThis tool is only meant for developers!`, `font-family: "Arbutus Slab"; font-size: 20px; color: orange`);
-});
+    loader.classList.add("loaded");
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 1000);
+}
+window.onload = () => {
+    setTimeout(onPageLoad, 1000);
+}
