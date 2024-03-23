@@ -136,7 +136,6 @@ body {
 .frontPage {
     height: 80vh;
 }
-
 .title {
     color: transparent;
     position: relative;
@@ -151,8 +150,6 @@ body {
     background-clip: text;
     background-attachment: fixed;
 }
-
-
 
 /* Images */
 .imageContainer {
@@ -193,39 +190,17 @@ body {
     scroll-snap-align: center;
 }
 
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 20;
-    bottom: 0;
-    padding: 1rem;
-    width: 100%;
-    gap: 10px;
-    box-shadow: 0 -60px 70px 70px black;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    font-family: "OpenDyslexicRegular", sans-serif;
-    background: rgb(20, 19, 19);
-    scroll-snap-align: center;
-}
-.footer span {
-    font-family: "Reey", sans-serif;
-}
-
 /* Pages */
 .aboutPage,
 .contactPage {
     scroll-snap-align: center;
     font-family: "OpenDyslexicRegular", sans-serif;
 }
-
 .header {
     margin: 1rem;
     font-size: 3rem;
     text-align: center;
-    font-family: "OpenDyslexicBold", sans-serif;
+    font-family: "EspressoBold", sans-serif;
 }
 .content {
     display: flex;
@@ -251,6 +226,27 @@ body {
     width: 100%;
     margin-bottom: 2rem;
     gap: 1rem;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    gap: 10px;
+    box-shadow: 0 -60px 70px 70px black;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: "OpenDyslexicRegular", sans-serif;
+    background: rgb(20, 19, 19);
+    scroll-snap-align: center;
+}
+.footer span {
+    font-family: "Reey", sans-serif;
 }
 
 /* Narrow Screen */
