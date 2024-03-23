@@ -1,0 +1,264 @@
+/* Style sheet for Johannes */
+
+/* fonts */
+@font-face {
+    font-family: "Bonveno";
+    src: url(./fonts/BonvenoCF-Light.woff2);
+}
+@font-face {
+    font-family: "ArbutusSlab";
+    src: url(./fonts/ArbutusSlab-Regular.woff2);
+}
+@font-face {
+    font-family: "Reey";
+    src: url(./fonts/Reey-Regular.woff);
+}
+@font-face {
+    font-family: "OpenDyslexicRegular";
+    src: url(./fonts/OpenDyslexicThree-Regular.woff2);
+}
+@font-face {
+    font-family: "OpenDyslexicBold";
+    src: url(./fonts/OpenDyslexicThree-Bold.woff2);
+}
+@font-face {
+    font-family: "EspressoBold";
+    src: url(./fonts/EspressoBold.woff2);
+}
+
+/* General */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+html {
+    scroll-snap-type: y mandatory;
+}
+a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px white;
+    transition: text-shadow .5s ease, font-size .5s ease;
+    font-size: calc(+20px);
+}
+a {
+    transition: text-shadow .5s ease, font-size .5s ease;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(20, 19, 19);
+}
+.pages {
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* scroll-snap-align: center; */
+}
+
+/* Layer Mask */
+.layerMask {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 120vh;
+    position: fixed;
+    background-image: linear-gradient( rgb(20, 19, 19) 15%, transparent 30%,transparent 50%, rgb(20, 19, 19) 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.arrow {
+    position: fixed;
+    top: 85vh;
+    height: 30px;
+    width: 30px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow i{
+    color: white;
+    font-size: 2rem;
+    transition: text-shadow .5s ease;
+}
+.arrow > i:hover {
+    cursor: pointer;
+    text-shadow: 0 0 20px white;
+    transition: text-shadow .2s ease;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid black;
+    background: linear-gradient( transparent, rgba(50, 50, 50, 0.8));
+}
+.logo a {
+    font-family: "EspressoBold", sans-serif;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+.navbar > .items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    font-family: "OpenDyslexicRegular", sans-serif;
+}
+.link a{
+    padding: 0 1rem;
+    text-decoration: none;
+    border-left: 2px solid white;
+}
+
+/* Front Page */
+.frontPage {
+    height: 80vh;
+}
+
+.title {
+    color: transparent;
+    position: relative;
+    margin: 0 2rem;
+    font-size: 4rem;
+    text-align: center;
+    font-family: "EspressoBold", sans-serif;
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.216);
+    font-weight: bold;
+    scroll-snap-align: center;
+    background-image: url(./images/OpenAI12.jpeg);
+    background-clip: text;
+    background-attachment: fixed;
+}
+
+
+
+/* Images */
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 250px;
+    gap: 3rem;
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 2px solid white;
+    scroll-snap-align: center;
+    transition: width 2s ease, height 2s ease, box-shadow 1s ease;
+}
+.image:hover {
+    width: 350px;
+    height: 350px;
+    transition: width 2s ease, height 2s ease, box-shadow 1s ease;
+    box-shadow: 0 0 50px rgb(183, 50, 255);
+}
+.image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-position: center;
+}
+.imageInfo {
+    font-family: "OpenDyslexicRegular", sans-serif;
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+    gap: 10px;
+    box-shadow: 0 -60px 70px 70px black;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: "OpenDyslexicRegular", sans-serif;
+    background: rgb(20, 19, 19);
+    scroll-snap-align: center;
+}
+.footer span {
+    font-family: "Reey", sans-serif;
+}
+
+/* Pages */
+.aboutPage,
+.contactPage {
+    scroll-snap-align: center;
+    font-family: "OpenDyslexicRegular", sans-serif;
+}
+
+.header {
+    margin: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "OpenDyslexicBold", sans-serif;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    text-align: center;
+    max-width: 800px;
+}
+
+/* About Page */
+.signature {
+    position: relative;
+    top: 20px;
+    left: 120px;
+}
+
+/* Contacts Page */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+/* Narrow Screen */
+@media (max-width:450px) {
+    .logo {
+        font-size: 1rem;
+    }
+    .footer  {
+        font-size: 0.8rem;
+    }
+}
