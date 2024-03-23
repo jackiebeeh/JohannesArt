@@ -137,6 +137,8 @@ body {
     height: 80vh;
 }
 .title {
+    padding-top: 1000px;
+    opacity: 0;
     color: transparent;
     position: relative;
     margin: 0 2rem;
@@ -149,6 +151,17 @@ body {
     background-image: url(./images/OpenAI12.jpeg);
     background-clip: text;
     background-attachment: fixed;
+    animation: titleAnimation 3s .5s cubic-bezier(.31,-0.09,.38,.82) forwards;
+}
+@keyframes titleAnimation{
+    0% {
+        padding-top: 1000px;
+        opacity: 0;
+    }
+    100% {
+        padding-top: 0px;
+        opacity: 1;
+    }
 }
 
 /* Images */

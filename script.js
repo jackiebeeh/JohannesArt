@@ -1,5 +1,4 @@
 // Scroll one page with button press
-
 let arrow = document.querySelector(".arrow");
 let pages = document.querySelectorAll(".pages");
 let frontPage = document.querySelector(".frontPage");
