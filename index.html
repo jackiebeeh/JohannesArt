@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johannes</title>
-    <link rel="stylesheet" href="./style.css"/>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css"/>
+    <!-- <link rel="stylesheet" href="./themes/lightStyle.css" data-theme="light" media="(prefers-color-scheme: light)"/>
+    <link rel="stylesheet" href="./themes/darkStyle.css" data-theme="dark" media="(prefers-color-scheme: dark)"/> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 </head>
 <body>
     <div id="loader-page">
@@ -21,15 +24,25 @@
 
     <div class="navbar">
         <div class="logo">
-            <a href="./index.html">Johannes</a>
+            <a href="./index.html">
+                Johannes
+            </a>
         </div>
         <div class="items">
             <div class="about link">
-                <a href="./pages/AboutPage.html">About</a>
+                <a href="./pages/AboutPage.html">
+                    About
+                </a>
             </div>
             <div class="contact link">
-                <a href="./pages/ContactPage.html">Contact</a>
+                <a href="./pages/ContactPage.html">
+                    Contact
+                </a>
             </div>
+            <button type="button" 
+                class="lightButton" 
+                data-theme-toggle aria-label="Change to light theme">
+            </button>
         </div>
     </div>
 

@@ -1,0 +1,44 @@
+/* Dark Theme Style */
+* {
+    color: white;
+}
+a:hover{
+    text-shadow: 0 0 20px white;
+}
+body {
+    background: rgb(20, 19, 19);
+}
+.layerMask {
+    background-image: linear-gradient( rgb(20, 19, 19) 15%, transparent 30%,transparent 50%, rgb(20, 19, 19) 70%);
+}
+.arrow i {
+    color: white;
+}
+.arrow > i:hover {
+    text-shadow: 0 0 20px white;
+}
+.navbar {
+    border-bottom: 2px solid black;
+    background: linear-gradient( black, rgba(50, 50, 50, 0.8));
+}
+.link a {
+    border-left: 2px solid white;
+}
+.title {
+    color: transparent;
+}
+.image:hover {
+    box-shadow: 0 0 50px rgb(183, 50, 255);
+}
+.footer {
+    box-shadow: 0 -60px 70px 70px black;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgb(20, 19, 19);
+}
+.lightButton {
+    background: black;
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+.lightButton::after {
+    
+}

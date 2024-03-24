@@ -24,6 +24,7 @@ arrow.addEventListener("click", () => {
 
 // Window on load load events:
 let loader = document.getElementById("loader-page");
+
 function onPageLoad(){
     console.log(`%cJOHANNES ART`, `font-family: "BonvenoCF"; font-size: 30px`);
     console.log(`%cThis tool is only meant for developers!`, `font-family: "Arbutus Slab"; font-size: 20px; color: orange`);
@@ -33,5 +34,71 @@ function onPageLoad(){
     }, 1000);
 }
 window.onload = () => {
+    updateButton({button: lightButton, isDark: currentThemeSetting === "dark"});
+    updateHtmlTheme({theme: currentThemeSetting});
     setTimeout(onPageLoad, 1000);
 }
+
+// Change webpage theme to light or dark:
+const lightButton = document.querySelector(".lightButton");
+const buttonTheme = sessionStorage.getItem("theme");
+let systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+let systemSettingLight = window.matchMedia("(prefers-color-scheme: light)");
+let currentThemeSetting = getTheme({ buttonTheme, systemSettingDark });
+let currentSystemSetting;
+
+function getSystemSetting() {
+    if (systemSettingDark.matches) {
+        return "dark";
+    }
+    if (systemSettingLight.matches) {
+        return "light";
+    }
+    return "null";
+}
+function getTheme({buttonTheme, systemSettingDark}) {
+    if (buttonTheme !== "undefined" && buttonTheme !== null) {
+        return buttonTheme;
+    }
+    if (systemSettingDark.matches) {
+        return "dark";
+    }
+    if (systemSettingLight.matches) {
+        return "light";
+    }
+    return "dark";
+}
+function updateButton ({button, isDark}) {
+    let newContent = isDark ? "ON" : "OFF";
+    button.innerText = newContent;
+    button.setAttribute("aria-label", `Turn light "${newContent}"`);
+    console.log(`newContent: ${newContent}`);
+}
+function updateHtmlTheme({theme}) {
+    document.querySelector("html").setAttribute("data-theme", theme);
+}
+function changeTheme() {
+    let newTheme = currentThemeSetting === 
+    "dark" ? "light": "dark";
+    updateButton({button: lightButton, 
+        isDark: newTheme === "dark" });
+    updateHtmlTheme({theme: newTheme});
+    sessionStorage.setItem("theme", newTheme);
+    currentThemeSetting = newTheme;
+}
+
+// listen to button clicks
+lightButton.addEventListener("click", () => {
+    changeTheme();
+});
+
+// Listen for user system setting theme changes
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+    currentSystemSetting = getSystemSetting();
+    console.log("change");
+    console.log(currentSystemSetting)
+    if (currentSystemSetting === currentThemeSetting) {
+        return;
+    }
+    changeTheme();
+});
