@@ -54,8 +54,6 @@ body {
     justify-content: center;
     align-items: center;
     min-width: 400px;
-    transition: background-color .5s ease-in;
-
 }
 .pages {
     width:100%;
