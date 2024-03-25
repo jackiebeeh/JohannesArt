@@ -94,8 +94,6 @@ lightButton.addEventListener("click", () => {
 // Listen for user system setting theme changes
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
     currentSystemSetting = getSystemSetting();
-    console.log("change");
-    console.log(currentSystemSetting)
     if (currentSystemSetting === currentThemeSetting) {
         return;
     }
