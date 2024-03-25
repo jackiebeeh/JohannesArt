@@ -99,3 +99,8 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
     }
     changeTheme();
 });
+
+
+window.addEventListener("mousemove", (e) => {
+    console.log(e.target);
+})
