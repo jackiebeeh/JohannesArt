@@ -53,9 +53,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     width: 100vw;
-    min-width: 400px;
 }
 .pages {
     width:100%;
@@ -122,6 +120,7 @@ body {
     font-size: 2rem;
     margin: 0 1rem;
     text-decoration: none;
+    color: inherit;
 }
 .navbar > .items {
     display: flex;
@@ -364,27 +363,6 @@ body {
     box-shadow: 0 -5px 20px -3px white;
     animation: spin 1.5s linear infinite;
 }
-@keyframes spin {
-    0% {rotate: 0deg;}
-    50% {rotate: 180deg;}
-    100% {rotate: 360deg;}
-}
-@-moz-keyframes spin {
-    0% { rotate: 0deg;}
-    50% {rotate: 180deg;}
-    100% {rotate: 360deg;}
-}
-@-webkit-keyframes spin {
-    0% { rotate: 0deg;}
-    50% {rotate: 180deg;}
-    100% {rotate: 360deg;}
-}
-@-o-keyframes spin {
-    0% { rotate: 0deg;}
-    50% {rotate: 180deg;}
-    100% {rotate: 360deg;}
-}
-
 .loaded #loader {
     opacity: 0;
     visibility: hidden;
@@ -406,6 +384,27 @@ body {
     display: none;
     transform: translateY(-100%);
     transition: all 0.5s 1s ease-out;
+}
+/* Spin animation for loader */
+@keyframes spin {
+    0% {rotate: 0deg;}
+    50% {rotate: 180deg;}
+    100% {rotate: 360deg;}
+}
+@-moz-keyframes spin {
+    0% { rotate: 0deg;}
+    50% {rotate: 180deg;}
+    100% {rotate: 360deg;}
+}
+@-webkit-keyframes spin {
+    0% { rotate: 0deg;}
+    50% {rotate: 180deg;}
+    100% {rotate: 360deg;}
+}
+@-o-keyframes spin {
+    0% { rotate: 0deg;}
+    50% {rotate: 180deg;}
+    100% {rotate: 360deg;}
 }
 
 /* light button */
@@ -520,10 +519,40 @@ body {
 
 /* Narrow Screen */
 @media (max-width:450px) {
-    .logo {
-        font-size: 1rem;
+    .logo a {
+        font-size: 1.2rem;
     }
     .footer  {
-        font-size: 0.8rem;
+        font-size: .8rem;
+    }
+}
+@media (max-width:350px) {
+    .logo a {
+        font-size: .8rem;
+    }
+    .footer  {
+        font-size: .8rem;
+    }
+}
+
+/* Larger Screen */
+@media (min-width:850px) {
+    .title {
+        font-size: 7rem;
+    }
+}
+@media (min-width:950px) {
+    .title {
+        font-size: 8rem;
+    }
+}
+@media (min-width:1200px) {
+    .title {
+        font-size: 10rem;
+    }
+}
+@media (min-width: 1420px) {
+    .title {
+        font-size: 11rem;
     }
 }
