@@ -53,6 +53,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    width: 100vw;
     min-width: 400px;
 }
 .pages {
@@ -118,7 +120,7 @@ body {
 .logo a {
     font-family: "EspressoBold", sans-serif;
     font-size: 2rem;
-    margin-left: 1rem;
+    margin: 0 1rem;
     text-decoration: none;
 }
 .navbar > .items {
@@ -131,6 +133,7 @@ body {
 .link a{
     padding: 0 1rem;
     text-decoration: none;
+    color: inherit;
     /* border-left: 2px solid white; */
 }
 
