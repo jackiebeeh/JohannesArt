@@ -362,7 +362,7 @@ body {
     animation: spin 1.5s linear infinite;
 }
 @keyframes spin {
-    0% { rotate: 0deg;}
+    0% {rotate: 0deg;}
     50% {rotate: 180deg;}
     100% {rotate: 360deg;}
 }
@@ -384,22 +384,22 @@ body {
 
 .loaded #loader {
     opacity: 0;
-    visibility: none;
+    visibility: hidden;
     content: "";
     transition: all 0.5s ease-out;
 }
 .loaded .loader-page-section.left-section {
-    visibility: none;
+    visibility: hidden;
     transform: translateX(-100%);
     transition: all 0.7s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .loaded .loader-page-section.right-section {
-    visibility: none;
+    visibility: hidden;
     transform: translateX(100%);
     transition: all 0.7s 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .loaded #loader-page{
-    visibility: none;
+    visibility: hidden;
     display: none;
     transform: translateY(-100%);
     transition: all 0.5s 1s ease-out;
@@ -422,88 +422,88 @@ body {
 /* Themes */
 [data-theme="light"] {
     * {
-        color: rgb(56, 53, 53);
+        color: rgb(56, 53, 53)
     }
     a:hover{
-        text-shadow: 0 0 20px rgb(246, 184, 121);
+        text-shadow: 0 0 20px rgb(246, 184, 121)
     }
     body {
-        background: antiquewhite;
+        background: antiquewhite
     }
     .layerMask {
-        background-image: linear-gradient( antiquewhite 8%, transparent 25%,transparent 50%, antiquewhite 80%);
+        background-image: linear-gradient( antiquewhite 8%, transparent 25%,transparent 50%, antiquewhite 80%)
     }
     .arrow i {
-        color: rgb(56, 53, 53);
+        color: rgb(56, 53, 53)
     }
     .arrow > i:hover {
-        text-shadow: 0 0 20px rgb(246, 184, 121);
+        text-shadow: 0 0 20px rgb(246, 184, 121)
     }
     .navbar {
         border-bottom: 2px solid antiquewhite;
-        background: linear-gradient( transparent, white);
+        background: linear-gradient( transparent, white)
     }
     .link a {
-        border-left: 2px solid rgb(56, 53, 53);
+        border-left: 2px solid rgb(56, 53, 53)
     }
     .title {
         color: transparent;
     }
     .image:hover {
-        box-shadow: 0 0 50px rgb(246, 184, 121);
+        box-shadow: 0 0 50px rgb(246, 184, 121)
     }
     .footer {
         box-shadow: 0 -60px 70px 70px white;
         color: rgba(56, 53, 53, .8);
         border-top: 1px solid rgba(20, 19, 19, 0.8);
-        background: white;
+        background: white
     } 
     .lightButton {
         background: white;
-        border: 2px solid rgba(56, 53, 53, 0.2);
+        border: 2px solid rgba(56, 53, 53, 0.2)
     }
 }
 [data-theme="dark"] {
     * {
-        color: white;
+        color: white
     }
     a:hover{
-        text-shadow: 0 0 20px white;
+        text-shadow: 0 0 20px white
     }
     body {
-        background: rgb(20, 19, 19);
+        background: rgb(20, 19, 19)
     }
     .layerMask {
-        background-image: linear-gradient( rgb(20, 19, 19) 15%, transparent 30%,transparent 50%, rgb(20, 19, 19) 70%);
+        background-image: linear-gradient( rgb(20, 19, 19) 15%, transparent 30%,transparent 50%, rgb(20, 19, 19) 70%)
     }
     .arrow i {
-        color: white;
+        color: white
     }
     .arrow > i:hover {
-        text-shadow: 0 0 20px white;
+        text-shadow: 0 0 20px white
     }
     .navbar {
         border-bottom: 2px solid black;
-        background: linear-gradient( black, rgba(50, 50, 50, 0.8));
+        background: linear-gradient( black, rgba(50, 50, 50, 0.8))
     }
     .link a {
-        border-left: 2px solid white;
+        border-left: 2px solid white
     }
     .title {
-        color: transparent;
+        color: transparent
         
     }
     .image:hover {
-        box-shadow: 0 0 50px rgb(183, 50, 255);
+        box-shadow: 0 0 50px rgb(183, 50, 255)
     }
     .footer {
         box-shadow: 0 -60px 70px 70px black;
         border-top: 1px solid rgba(255, 255, 255, 0.5);
-        background: rgb(20, 19, 19);
+        background: rgb(20, 19, 19)
     }
     .lightButton {
         background: black;
-        border: 2px solid rgba(255, 255, 255, .5);
+        border: 2px solid rgba(255, 255, 255, .5)
     }
 }
 

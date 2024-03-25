@@ -72,7 +72,6 @@ function updateButton ({button, isDark}) {
     let newContent = isDark ? "ON" : "OFF";
     button.innerText = newContent;
     button.setAttribute("aria-label", `Turn light "${newContent}"`);
-    console.log(`newContent: ${newContent}`);
 }
 function updateHtmlTheme({theme}) {
     document.querySelector("html").setAttribute("data-theme", theme);
