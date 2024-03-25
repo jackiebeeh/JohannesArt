@@ -404,7 +404,15 @@ body {
     transform: translateY(-100%);
     transition: all 0.5s 1s ease-out;
 }
+
+/* light button */
 .lightButton {
+    /* Removing browser styling: */
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    /* Adding personalized styling: */
     height: 35px;
     width: 35px;
     display: flex;
