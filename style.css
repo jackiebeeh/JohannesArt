@@ -158,6 +158,8 @@ body {
     background-image: url(./images/OpenAI12.jpeg);
     background-clip: text;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
     background-attachment: fixed;
     animation: titleAnimation 3s .5s cubic-bezier(.31,-0.09,.38,.82) forwards;
 }
