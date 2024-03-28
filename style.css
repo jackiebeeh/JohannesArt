@@ -493,7 +493,7 @@ body {
 } */
 [data-theme="dark"] {
     * {
-        color: white;
+        /* color: white; */
     }
     a:hover{
         /* text-shadow: 0 0 20px white; */
