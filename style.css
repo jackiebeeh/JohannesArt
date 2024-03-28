@@ -55,6 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
+    background: black;
 }
 .pages {
     width:100%;
