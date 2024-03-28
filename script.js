@@ -24,7 +24,7 @@ if (document.title === "Johannes") {
     })
 }
 
-// Window on load load events:
+// Window on load events:
 let loader = document.getElementById("loader-page");
 
 function onPageLoad(){
@@ -102,7 +102,3 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
     }
     changeTheme();
 });
-
-window.addEventListener("mousemove", (e) => {
-    console.log(e.target);
-})
