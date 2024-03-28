@@ -72,6 +72,7 @@ function updateButton ({button, isDark}) {
     let newContent = isDark ? "ON" : "OFF";
     button.innerText = newContent;
     button.setAttribute("aria-label", `Turn light "${newContent}"`);
+    button.setAttribute("title", `Turn light ${newContent}`);
 }
 function updateHtmlTheme({theme}) {
     document.querySelector("html").setAttribute("data-theme", theme);
@@ -99,7 +100,6 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
     }
     changeTheme();
 });
-
 
 window.addEventListener("mousemove", (e) => {
     console.log(e.target);
