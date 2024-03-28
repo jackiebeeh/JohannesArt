@@ -434,7 +434,7 @@ body {
 }
 
 /* Themes */
-[data-theme="light"] {
+/* [data-theme="light"] {
     * {
         color: rgb(56, 53, 53);
     }
@@ -538,7 +538,7 @@ body {
         color: black;
         transition: all .4s ease-in;
     }
-}
+} */
 
 /* Narrow Screen */
 @media (max-width:450px) {
