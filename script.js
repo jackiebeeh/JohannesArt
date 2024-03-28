@@ -1,10 +1,10 @@
 // Scroll one page with button press
-let arrow = document.querySelector(".arrow");
-let pages = document.querySelectorAll(".pages");
-let frontPage = document.querySelector(".frontPage");
-let currentScroll = window.scrollY;
-
 if (document.title === "Johannes") {
+    let arrow = document.querySelector(".arrow");
+    let pages = document.querySelectorAll(".pages");
+    let frontPage = document.querySelector(".frontPage");
+    let currentScroll = window.scrollY;
+
     arrow.addEventListener("click", () => {
         if (window.scrollY === 0 || window.scrollY < 600) {
             window.scroll({
