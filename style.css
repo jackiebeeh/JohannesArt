@@ -441,7 +441,7 @@ body {
         text-shadow: 0 0 20px rgb(246, 184, 121);
     }
     body {
-        background: antiquewhite;
+        background: orange;
     }
     .layerMask {
         background-image: linear-gradient( antiquewhite 8%, transparent 25%,transparent 50%, antiquewhite 80%);

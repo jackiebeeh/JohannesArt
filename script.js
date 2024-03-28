@@ -28,7 +28,7 @@ if (document.title === "Johannes") {
 let loader = document.getElementById("loader-page");
 
 function onPageLoad(){
-    console.log(`%cJOHANNES ART`, `font-family: "BonvenoCF"; font-size: 30px`);
+    console.log(`%cJohannes Art`, `font-family: "EspressoBold"; font-size: 30px`);
     console.log(`%cThis tool is only meant for developers!`, `font-family: "Arbutus Slab"; font-size: 20px; color: orange`);
     loader.classList.add("loaded");
     setTimeout(() => {
