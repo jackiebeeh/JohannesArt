@@ -256,12 +256,12 @@ min-height: 720px;
     bottom: 0;
     padding: 1rem;
     width: 100%;
-    gap: 10px;
+    gap: 1rem;
     box-shadow: 0 -60px 70px 70px black;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     font-family: "OpenDyslexicRegular", sans-serif;
     background: rgb(20, 19, 19);
-    scroll-snap-align: center;
+    scroll-snap-align: bottom;
 }
 .footer span {
     font-family: "Reey", sans-serif;
