@@ -1,3 +1,10 @@
+// Photo pages script
+const ImagesArray = {
+    
+}
+
+
+
 // Scroll one page with button press
 if (document.title === "Johannes") {
     let arrow = document.querySelector(".arrow");
