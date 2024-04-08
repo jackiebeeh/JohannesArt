@@ -1,9 +1,83 @@
 // Photo pages script
-const ImagesArray = {
-    
-}
+let ImagesList = [
+    { 
+        src: "./images/OpenAI01.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI02.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI03.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI04.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI05.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI06.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI07.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI08.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI09.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI10.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI11.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI12.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI13.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI14.jpeg",
+        info: "Some info about the artwork"
+    },
+    { 
+        src: "./images/OpenAI15.jpeg",
+        info: "Some info about the artwork"
+    }
+];
 
-
+let imagePages = document.querySelector(".imagePages");
+ImagesList.forEach((image) => {
+    let newPage = document.createElement("div");
+    newPage.classList.add("pages");
+    newPage.innerHTML = (
+    `<div class="imageContainer">
+            <div class="image">
+                <img src=${image.src}>
+            </div>
+            <div class="imageInfo">
+                ${image.info}
+            </div>
+        </div>`
+    )
+    imagePages.appendChild(newPage);
+});
 
 // Scroll one page with button press
 if (document.title === "Johannes") {
