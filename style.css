@@ -35,6 +35,12 @@
     color: white;
     box-sizing: border-box;
 }
+:root {
+    --imageWidth: 50vw;
+    --imageHeight: 50vh;
+    --bigImageWidth: 60vw;
+    --bigImageHeight: 60vh;
+}
 html {
     scroll-snap-type: y mandatory;
 }
@@ -181,16 +187,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    width: 300px;
+    height: min(var(--imageWidth), var(--imageHeight));
+    width: min(var(--imageWidth), var(--imageHeight));
     border-radius: 50%;
     border: 2px solid white;
     scroll-snap-align: center;
     transition: width 2s ease, height 2s ease, box-shadow 1s ease;
 }
 .image:hover {
-    width: 350px;
-    height: 350px;
+    height: min(var(--bigImageWidth), var(--bigImageHeight));
+    width: min(var(--bigImageWidth), var(--bigImageHeight));
     transition: width 2s ease, height 2s ease, box-shadow 1s ease;
     box-shadow: 0 0 50px rgb(183, 50, 255);
 }
