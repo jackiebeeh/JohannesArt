@@ -60,7 +60,7 @@ body {
 .pages {
     width:100%;
     height: 100vh;
-min-height: 720px;
+    min-height: 720px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +146,7 @@ min-height: 720px;
     color: transparent;
     position: relative;
     margin: 0 2rem;
-    font-size: 4rem;
+    font-size: clamp(3rem, 12vw, 50rem);
     text-align: center;
     font-family: "EspressoBold", sans-serif;
     font-weight: bold;
@@ -155,7 +155,6 @@ min-height: 720px;
     background-clip: text;
     background-attachment: fixed;
     animation: titleAnimation 3s .5s cubic-bezier(.31,-0.09,.38,.82) forwards;
-    transition: font-size 1s ease-in-out;
 }
 @keyframes titleAnimation{
     0% {
@@ -385,27 +384,5 @@ min-height: 720px;
     }
     .footer {
         font-size: .5rem;
-    }
-}
-
-/* Wide Screen */
-@media (min-width:850px) {
-    .title {
-        font-size: 7rem;
-    }
-}
-@media (min-width:950px) {
-    .title {
-        font-size: 8rem;
-    }
-}
-@media (min-width:1200px) {
-    .title {
-        font-size: 10rem;
-    }
-}
-@media (min-width:1420px) {
-    .title {
-        font-size:11rem;
     }
 }
